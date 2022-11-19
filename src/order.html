@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Index @ Moe's Dough</title>
+  <link rel="shortcut icon" href="images/favicon.ico" />
+  <link href="styles/main.css" rel="stylesheet" type="text/css" />
+  <!--- First iteration of the website by August Meyers  & Jared Oberst -->
+</head>
+<div class="wrapper">
+  <header>
+    <div class="header-content">
+      <div class="header-image">
+        <img src="images/moesdoe.png" alt="Moe's Dough Header" style="height: 100%; width: 100%" />
+      </div>
+      <div class="header-text">
+        <h1>Moe's Dough</h1>
+        <h2>Located at 1200 S Franklin St, Mt Pleasant, Michigan</h2>
+      </div>
+    </div>
+  </header>
+  <div class="menu-color">
+    <nav id="nav_menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="customer-registration.html">Registration</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="calendar.html">Calender</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="references.html">References</a></li>
+        <li><a href="order.html" class="current">Order</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="mobile-menu-color">
+    <nav id="mobile_menu">
+      <ul>
+        <li><a>Menu</a>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="customer-registration.html">Customer</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="calendar.html">Calender</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="references.html">References</a></li>
+            <li><a href="order.html" class="current">Order</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!--- End of header --->
+
+  <div class="body-content">
+    <div class="content-box" style="height: 10em">
+      <h1>
+        Interested in investing? Use the form below to generate an invoice
+        that will be sent to an agent.
+      </h1>
+    </div>
+
+    <form name="size" method="post">
+      <div class="content-box" style="height: 10em">
+        <div class="box-1">
+          Power Size:
+          <select name="Size">
+            <option value="Small">Small House</option>
+            <option value="Medium">Medium House</option>
+            <option value="Large">Large House</option>
+            <option value="Business">Business</option>
+          </select>
+        </div>
+        <div class="box-2">
+          Location:
+          <select name="county">
+            <option value="michigan-oakland">Oakland</option>
+            <option value="michigan-isabella" selected>Isabella</option>
+            <option value="michigan-tawas">Tawas</option>
+          </select>
+        </div>
+      </div>
+      <div class="content-box" style="height: 10em">
+        <div class="box-1">
+          Additional Options:
+          <input type="radio" name="additional" value="self-install-solar" />Self Install Solar<br />
+          <input type="radio" name="additional" value="self-install-battery" checked />Self Install Battery<br />
+          <input type="radio" name="additional" value="pro-install-solar" />Professionally Installed Solar<br />
+          <input type="radio" name="additional" value="pro-install-power" />Professionally Installed Battery<br />
+        </div>
+        <div class="box-2">
+          Contact Type:
+          <input type="checkbox" name="contact1" value="phone" />Phone<br />
+          <input type="checkbox" name="contact2" value="email" />Email<br />
+        </div>
+      </div>
+      <div class="content-box" style="height: 10em">
+        Additional Comments Pertaining to the service:
+        <textarea name="comments" placeholder="If you have any comments, please enter them here.">
+          </textarea>
+      </div>
+      <div class="content-box" style="height: 8em">
+        <input type="button" name="checkout" value="Checkout" onClick="setInterval(setProgressAndMeter, 500)"
+          style="width: 50%; height: 6em">
+      </div>
+    </form>
+  </div>
+
+  <!--- End of body content --->
+  <footer style=>
+    <p><em>&copy;</em> Moe's Dough | August Meyers & Jared Oberst</p>
+  </footer>
+</div>
+
+</html>

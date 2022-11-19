@@ -1,0 +1,12 @@
+.body-content {
+    background-color: #c6d4da;
+    width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    height: 55em;
+    margin-top: 2em;
+    margin-bottom: 5em;
+}
+.content-box {
+    text-align: left;
+}
