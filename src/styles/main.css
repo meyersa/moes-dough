@@ -16,19 +16,24 @@ html {
   padding: 0;
 }
 body {
+  font-family: sans-serif;
   padding: 0;
   margin: 0;
 }
 body * {
   color: var(--body-text);
   font-weight: bold;
-
 }
 .body-text {
   width: var(--width);
   padding: 3em 3em;
   margin: 3em auto;
   background: var(--menu) 
+}
+.header-body-text {
+  margin: 0 auto;
+  text-align: center;
+  font-weight: bolder;
 }
 /* Sets the background color which is an off white */
 .wrapper {
@@ -207,6 +212,8 @@ nav {
   font-family: sans-serif;
   color: var(--body-text);
   flex-shrink: 0;
+  align-items: center;
+
 }
 .content-box-2 {
   display: flex;
@@ -218,6 +225,7 @@ nav {
   font-family: sans-serif;
   color: var(--body-text);
   flex-shrink: 0;
+  align-items: center;
 }
 /* Flex container for body flex boxes */
 .box-1 {

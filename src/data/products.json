@@ -1,0 +1,37 @@
+[
+    {
+        "doughnut": "Raspberry",
+        "description": "",
+        "imagine-loc": "images/raspberry-doughnut.png",
+        "alt-text": "",
+        "featured" : "False"
+    },
+    {
+        "doughnut": "Pumpkin Filled",
+        "description": "Our signature doughnut, but with a festive twist. Filled with a pumpkin cream puree and generously topped with pumpkin frosting, this delightfully fall treat will be sure to knock your socks off!",
+        "imagine-loc": "images/pumpkin-doughnut.png",
+        "alt-text": "Pumpkin Filled Doughnut",
+        "featured" : "True"
+    },
+    {
+        "doughnut": "Glazed Doughnut",
+        "description": "Another fall classic, our glazed doughnut makes its annual appearance. Warm and cinnamon are the only words to describe this experience.",
+        "imagine-loc": "images/glazed-doughnut.png",
+        "alt-text": "Glazed Doughnut",
+        "featured" : "True"
+    },
+    {
+        "doughnut": "Blueberry",
+        "description": "Our signature doughnut, filled with our class Blueberry filling, with a matching Blueberry glaze on top!",
+        "imagine-loc": "images/plain-doughnut.png",
+        "alt-text": "Plain Doughnut",
+        "featured" : "False"
+    },
+    {
+        "doughnut": "Raspberry",
+        "description": "",
+        "imagine-loc": "images/raspberry-doughnut.png",
+        "alt-text": "",
+        "featured" : "False"
+    },
+]

@@ -1,0 +1,42 @@
+:root {
+    --width: 900px;
+    --header: #f27592;
+    /* #2C314A to #888B99 */
+    --menu: #12b0ab;
+    --menu-text: #f0fbff;
+    --menu-hover: #0b8a85;
+    --menu-current: #0b8a85;
+    --body: #f3e562;
+    --header-text: #ffffff;
+    --body-text: #ffffffec;
+}
+
+form#email_form {
+    margin: 0 auto;
+    padding: 2em;
+
+}
+
+input {
+    background: var(--body-text);
+    border-color: var(--body-text);
+    padding: .2em;
+    margin: .2em;
+
+}
+
+input#join_list,
+input#clear_form {
+    margin: 1em;
+    color: var(--menu);
+    font-weight: bold;
+
+}
+
+.bottom-buttons {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+
+}
