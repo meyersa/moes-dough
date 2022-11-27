@@ -55,85 +55,37 @@
 
     <div class="content-box" style="padding-top: 15px">
         <div class="box-1">
-          <figure>
-            <img src="images/pumpkin-doughnut.png" alt="Pumpkin Filled Doughnut" width="100%" />
-          </figure>
+            <figure>
+                <img src="images/pumpkin-doughnut.png" alt="Pumpkin Filled Doughnut" width="100%" />
+            </figure>
         </div>
         <div class="box-2">
-          <h1>Pumpkin Filled Doughnut</h1>
-          <article>
-            <p>
-              Our signature doughnut, but with a festive twist. Filled with a pumpkin cream puree and generously topped with
-              pumpkin frosting, this delightfully fall treat will be sure to knock your socks off!
-            </p>
-          </article>
+            <h1>Pumpkin Filled Doughnut</h1>
+            <article>
+                <p>
+                    Our signature doughnut, but with a festive twist. Filled with a pumpkin cream puree and generously
+                    topped with
+                    pumpkin frosting, this delightfully fall treat will be sure to knock your socks off!
+                </p>
+            </article>
         </div>
-      </div>
-      <div class="content-box">
-        <div class="box-1" style="order: 2">
-          <figure>
-            <img src="images/glazed-doughnut.png" alt="Glazed Doughnut" width="100%" />
-          </figure>
-        </div>
-        <div class="box-2">
-          <h1>Glazed Doughnut</h1>
-          <article>
-            <p>
-              Another fall classic, our glazed doughnut makes its annual appearance. Warm and cinnamon are the only words
-              to describe this experience.
-            </p>
-          </article>
-        </div>
-      </div>
-      <div class="content-box" style="padding-top: 15px">
-        <div class="box-1">
-          <figure>
-            <img src="images/blueberry-doughnut.png" alt="Blueberry Doughnut" width="100%" />
-          </figure>
-        </div>
-        <div class="box-2">
-          <h1>Blueberry Doughnut</h1>
-          <article>
-            <p>
-              Our signature doughnut, filled with our class Blueberry filling, with a matching Blueberry glaze on top!
-            </p>
-          </article>
-        </div>
-      </div>
-      <div class="content-box">
-        <div class="box-1" style="order: 2">
-          <figure>
-            <img src="images/plain-doughnut.png" alt="Plain Doughnut" width="100%" />
-          </figure>
-        </div>
-        <div class="box-2">
-          <h1>Plain Doughnut</h1>
-          <article>
-            <p>
-              For those who aren't looking for a sugary experience and would prefer something less extraordinary, the original plain doughnut is there for you. While it may seem a bit plain.. This doughnut still packs a punch!
-            </p>
-          </article>
-        </div>
-      </div>
-      <div class="content-box" style="padding-top: 15px">
-        <div class="box-1">
-          <figure>
-            <img src="images/wind-turbine.jpg" alt="Wind Turbine" width="100%" />
-            <figcaption>Wind Turbines</figcaption>
-          </figure>
-        </div>
-        <div class="box-2">
-          <h1>Wind</h1>
-          <article>
-            <p>
-              Meyers Energy is a break through support of Wind Energy. We have
-              heavily invested in deploying turbines on shore and off shore
-              wherever possible.
-            </p>
-          </article>
-        </div>
-      </div>
-      
+    </div>
+
+    <script>
+        main()
+
+        async function main() {
+            productsJSON = fetchJSON()
+            await console.log(productsJSON)
+
+        }
+
+        async function fetchJSON() {
+            return await fetch("data/products.json").then((response) => response.json())
+        }
+
+    </script>
+
     <!--- End of body content --->
     <footer style=>
         <p><em>&copy;</em> Moe's Dough | August Meyers & Jared Oberst</p>
