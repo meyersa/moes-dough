@@ -53,56 +53,55 @@
   </div>
   <!--- End of header --->
 
-  <div class="body-content">
-    <div class="content-box" style="height: 10em">
+  <div class="body-text">
+    <div class="content-box order-content-box">
       <h1>
-        Interested in investing? Use the form below to generate an invoice
-        that will be sent to an agent.
+        Want to have a great doughnut? Start here to place your order!
       </h1>
     </div>
 
     <form name="size" method="post">
-      <div class="content-box" style="height: 10em">
-        <div class="box-1">
-          Power Size:
-          <select name="Size">
-            <option value="Small">Small House</option>
-            <option value="Medium">Medium House</option>
-            <option value="Large">Large House</option>
-            <option value="Business">Business</option>
-          </select>
+      <div class="content-box order-content-box">
+        <div class="box-1 order-content-box">
+          Doughnut Flavor:
+            <select name="Size">
+                <option value="Blueberry">Blueberry</option>
+                <option value="Glazed">Glazed</option>
+                <option value="Plain">Plain</option>
+                <option value="Pumpkin">Pumpkin</option>
+                <option value="Pumpkin">Pumpkin</option>
+                <option value="Raspberry">Raspberry</option>
+                <option value="Strawberry">Strawberry</option>
+            </select>
         </div>
-        <div class="box-2">
+        <div class="box-2 order-content-box">
           Location:
           <select name="county">
-            <option value="michigan-oakland">Oakland</option>
-            <option value="michigan-isabella" selected>Isabella</option>
-            <option value="michigan-tawas">Tawas</option>
+            <option value="michigan-Mt.Pleasant">Mt. Pleasant</option>
+            <option value="TBA" selected>TBA</option>
           </select>
         </div>
       </div>
-      <div class="content-box" style="height: 10em">
-        <div class="box-1">
-          Additional Options:
-          <input type="radio" name="additional" value="self-install-solar" />Self Install Solar<br />
-          <input type="radio" name="additional" value="self-install-battery" checked />Self Install Battery<br />
-          <input type="radio" name="additional" value="pro-install-solar" />Professionally Installed Solar<br />
-          <input type="radio" name="additional" value="pro-install-power" />Professionally Installed Battery<br />
+      <div class="content-box order-content-box">
+        <div class="box-1 order-content-box">
+          Pickup Options:
+          <input type="radio" name="additional" value="drive-through" />Drive-Through Pickup<br />
+          <input type="radio" name="additional" value="in-store" checked />In-Store Pickup<br />
         </div>
-        <div class="box-2">
+        <div class="box-2 order-content-box">
           Contact Type:
           <input type="checkbox" name="contact1" value="phone" />Phone<br />
           <input type="checkbox" name="contact2" value="email" />Email<br />
         </div>
       </div>
-      <div class="content-box" style="height: 10em">
-        Additional Comments Pertaining to the service:
+      <div class="content-box order-content-box">
+        Any Special Instruction:
         <textarea name="comments" placeholder="If you have any comments, please enter them here.">
           </textarea>
       </div>
-      <div class="content-box" style="height: 8em">
-        <input type="button" name="checkout" value="Checkout" onClick="setInterval(setProgressAndMeter, 500)"
-          style="width: 50%; height: 6em">
+      <div class="content-box order-content-box">
+        <input type="button" name="checkout" value="Place Order" onClick="setInterval(setProgressAndMeter, 500)"
+          class="giant-button">
       </div>
     </form>
   </div>

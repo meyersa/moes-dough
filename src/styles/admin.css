@@ -1,0 +1,29 @@
+:root {
+    --width: 900px;
+    --header: #f27592;
+    /* #2C314A to #888B99 */
+    --menu: #12b0ab;
+    --menu-text: #f0fbff;
+    --menu-hover: #0b8a85;
+    --menu-current: #0b8a85;
+    --body: #f3e562;
+    --header-text: #ffffff;
+    --body-text: #ffffffec;
+}
+
+.login-item {
+    padding: 0 .2em .2em .2em;
+    margin: .2em;
+
+}
+
+.login-button {
+    background-color: var(--menu);
+    border-color: var(--header-text);
+
+}
+
+#user, #password {
+    color: var(--header)
+    
+}

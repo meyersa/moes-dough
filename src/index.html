@@ -7,6 +7,7 @@
   <title>Index @ Moe's Dough</title>
   <link rel="shortcut icon" href="images/favicon.ico" />
   <link href="styles/main.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <!--- First iteration of the website by August Meyers  & Jared Oberst -->
 </head>
 <div class="wrapper">
@@ -63,38 +64,35 @@
 
   <h1 class="header-body-text">Featured doughnuts!</h1>
 
-  <div class="content-box" style="padding-top: 15px">
-    <div class="box-1">
-      <figure>
-        <img src="images/pumpkin-doughnut.png" alt="Pumpkin Filled Doughnut" width="100%" />
-      </figure>
-    </div>
-    <div class="box-2">
-      <h1>Pumpkin Filled Doughnut</h1>
-      <article>
-        <p>
-          Our signature doughnut, but with a festive twist. Filled with a pumpkin cream puree and generously topped with
-          pumpkin frosting, this delightfully fall treat will be sure to knock your socks off!
-        </p>
-      </article>
-    </div>
-  </div>
-  <div class="content-box">
-    <div class="box-1" style="order: 2">
-      <figure>
-        <img src="images/glazed-doughnut.png" alt="Glazed Doughnut" width="100%" />
-      </figure>
-    </div>
-    <div class="box-2">
-      <h1>Glazed Doughnut</h1>
-      <article>
-        <p>
-          Another fall classic, our glazed doughnut makes its annual appearance. Warm and cinnamon are the only words
-          to describe this experience.
-        </p>
-      </article>
-    </div>
-  </div>
+  <script>
+
+    $.get('data/products.json', function (d) {
+      console.log(d)
+      d.doughnuts.forEach(function (b) {
+        if (b.featured == "True") {
+          $("#products").append(`
+            <div class="content-box" style="padding-top: 15px">
+                <div class="box-1">
+                    <figure>
+                        <img src="${b.image_location}" alt="${b.doughnut}" width="100%" />
+                    </figure>
+                </div>
+                <div class="box-2">
+                    <h1>${b.doughnut}</h1>
+                    <article>
+                        <p>${b.description}</p>
+                    </article>
+                </div>
+            </div> 
+            `);
+        };
+      });
+    });
+
+  </script>
+
+<div id="products"></div>
+
 
   <!--- End of body content --->
   <footer style=>

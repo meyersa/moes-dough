@@ -11,8 +11,12 @@
     --body-text: #ffffffec;
 }
 
+h1 {
+    padding: 1em 0 1em 0;
+    text-align: left !important;
+}
 form#email_form {
-    margin: 0 auto;
+    margin: 3em auto;
     padding: 2em;
 
 }
@@ -20,9 +24,9 @@ form#email_form {
 input {
     background: var(--body-text);
     border-color: var(--body-text);
-    padding: .2em;
+    padding: 0 .2em .2em .2em;
     margin: .2em;
-
+    color: var(--menu)
 }
 
 input#join_list,

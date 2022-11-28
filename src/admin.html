@@ -4,9 +4,12 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index @ Moe's Dough</title>
+    <title>login @ Moe's Dough</title>
     <link rel="shortcut icon" href="images/favicon.ico" />
     <link href="styles/main.css" rel="stylesheet" type="text/css" />
+    <link href="styles/admin.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="scripts/login.js"></script>
     <!--- First iteration of the website by August Meyers  & Jared Oberst -->
 </head>
 <div class="wrapper">
@@ -52,6 +55,62 @@
         </nav>
     </div>
     <!--- End of header --->
+
+    <body>
+        <main class="body-text">
+            <div>
+                <h1>Welcome to the admin panel, <span id="name"></span></h1>
+                <h2>Cookies..</h2>
+            </div>
+            <div>
+                <input type="button" id="create_doughnut" value="Create Doughnut" class="login-button">
+                <input type="button" id="edit_doughnut" value="Edit Doughnut" class="login-button">
+                <input type="button" id="clear_all" value="Clear All" class="login-button">
+            </div>
+            <div>
+                <div id="products"></div>
+            </div>
+            <div>
+                <input type="button" id="logout" value="Log Out" class="login-button">
+            </div>
+        </main>
+
+        <script>
+            const user = getCookieByName("user");
+            if (user) {
+                $("#name").text(user);
+                $("#logout").focus();
+
+                $("#logout").click(() => {
+                    deleteCookie("user");
+                    goToPage("index.html");
+                });
+            } else {
+                goToPage("index.html");
+            }
+
+            $.get('data/products.json', function (d) {
+            d.doughnuts.forEach(function (b) {
+                $("#products").append(`
+                <div class="content-box" style="padding-top: 15px">
+                    <div class="box-1">
+                        <figure>
+                            <img src="${b.image_location}" alt="${b.doughnut}" width="100%" />
+                        </figure>
+                    </div>
+                    <div class="box-2">
+                        <h1>${b.doughnut}</h1>
+                        <article>
+                            <p>${b.description}</p>
+                        </article>
+                        <input type="button" id="${b.doughnut}" value="delete" class="login-button">
+                    </div>
+                </div> 
+                `);
+            });
+        });
+        </script>
+    </body>
 
     <!--- End of body content --->
     <footer style=>

@@ -8,6 +8,8 @@
   <link rel="shortcut icon" href="images/favicon.ico" />
   <link href="styles/main.css" rel="stylesheet" type="text/css" />
   <link href="styles/calender.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="scripts/calendar.js"></script>
   <!--- First iteration of the website by August Meyers  & Jared Oberst -->
 </head>
 <div class="wrapper">
@@ -56,25 +58,24 @@
 
   <body>
     <main>
-      <div calss="calendar"></div><h2><span id="month_year"></span></h2>
-
-      <table id="calendar">
-        <tr>
-          <th>Sun</th>
-          <th>Mon</th>
-          <th>Tue</th>
-          <th>Wed</th>
-          <th>Thu</th>
-          <th>Fri</th>
-          <th>Sat</th>
-        </tr>
-      </table></div>
+      <div class="content-box content-calendar">
+        <div class="box-1">
+          <h2><span id="month_year"></span></h2>
+          <table id="calendar">
+            <tr>
+              <th>Sun</th>
+              <th>Mon</th>
+              <th>Tue</th>
+              <th>Wed</th>
+              <th>Thu</th>
+              <th>Fri</th>
+              <th>Sat</th>
+            </tr>
+          </table>
+        </div>
+        <img src="images/calendar-page-ad.png" alt="Calender Page Ad" width="200%" class="box-2"/>
+      </div>
     </main>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-    <script src="calendar.js"></script>
-    <div>
-      <img src="images/calendar-page-ad.png" alt="Calender Page Ad" style="height: 100%; width: 100%" />
-    </div>
   </body>
 
   <!--- End of body content --->

@@ -30,6 +30,9 @@ body * {
   margin: 3em auto;
   background: var(--menu) 
 }
+.body-list * {
+  padding: .4em;
+}
 .header-body-text {
   margin: 0 auto;
   text-align: center;
@@ -226,6 +229,16 @@ nav {
   color: var(--body-text);
   flex-shrink: 0;
   align-items: center;
+}
+.order-content-box {
+  height: 5em !important;
+  padding: 0 !important;
+}
+.giant-button {
+  width: 50%;
+  height: 6em;
+  background-color: var(--menu);
+  border-color: var(--header-text);
 }
 /* Flex container for body flex boxes */
 .box-1 {

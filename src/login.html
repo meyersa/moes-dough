@@ -4,10 +4,12 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index @ Moe's Dough</title>
+    <title>Admin @ Moe's Dough</title>
     <link rel="shortcut icon" href="images/favicon.ico" />
     <link href="styles/main.css" rel="stylesheet" type="text/css" />
+    <link href="styles/admin.css" rel="stylesheet" type="text/css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="scripts/login.js"></script>
     <!--- First iteration of the website by August Meyers  & Jared Oberst -->
 </head>
 <div class="wrapper">
@@ -27,7 +29,7 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="customer-registration.html">Registration</a></li>
-                <li><a href="products.html" class="current">Products</a></li>
+                <li><a href="products.html">Products</a></li>
                 <li><a href="calendar.html">Calender</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="references.html">References</a></li>
@@ -42,7 +44,7 @@
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="customer-registration.html">Registration</a></li>
-                        <li><a href="products.html" class="current">Products</a></li>
+                        <li><a href="products.html">Products</a></li>
                         <li><a href="calendar.html">Calender</a></li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="references.html">References</a></li>
@@ -54,31 +56,50 @@
     </div>
     <!--- End of header --->
 
-    <script>
+    <body>
+        <main class="body-text">
+            <h1>My Website</h1>
+            <div class="login-item">
+                <label for="user">User name:</label>
+                <input type="text" id="user">
+                <span class="message"></span>
+            </div>
+            <div class="login-item">
+                <label for="user">Password:</label>
+                <input type="text" id="password">
+                <span class="message"></span>
+            </div>
+            <div class="login-item">
+                <label></label>
+                <input type="button" id="login" value="Log In" class="login-button">
+            </div>
+        </main>
+        <script>
+            const user = getCookieByName("user");
 
-        $.get('data/products.json', function (d) {
-            d.doughnuts.forEach(function (b) {
-                $("#products").append(`
-                <div class="content-box" style="padding-top: 15px">
-                    <div class="box-1">
-                        <figure>
-                            <img src="${b.image_location}" alt="${b.doughnut}" width="100%" />
-                        </figure>
-                    </div>
-                    <div class="box-2">
-                        <h1>${b.doughnut}</h1>
-                        <article>
-                            <p>${b.description}</p>
-                        </article>
-                    </div>
-                </div> 
-                `);
+            $.get('data/logins.json', function (d) {
+                console.log(d.users)
+                if (user) {
+                    goToPage("admin.html");
+
+                } else {
+                    $("#user").focus();
+                    $("#login").click(() => {
+                        const user = $("#user").val();
+                        const password = $("#password").val();
+
+                        d.users.forEach((b) => {
+                            if (b.username == user && b.password == password) {
+                                setCookie("user", user);
+                                goToPage("admin.html");
+
+                            }
+                        })
+                    });
+                }
             });
-        });
-
-    </script>
-
-    <div id="products"></div>
+        </script>
+    </body>
 
     <!--- End of body content --->
     <footer style=>
