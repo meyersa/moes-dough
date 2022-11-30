@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index @ Moe's Dough</title>
+    <title>Registration @ Moe's Dough</title>
     <link rel="shortcut icon" href="images/favicon.ico" />
     <link href="styles/main.css" rel="stylesheet" type="text/css" />
     <link href="styles/registration.css" rel="stylesheet" type="text/css" />
@@ -20,6 +20,7 @@
                 <h1>Moe's Dough</h1>
                 <h2>Located at 1200 S Franklin St, Mt Pleasant, Michigan</h2>
             </div>
+            <div id="admin-login"></div>
         </div>
     </header>
     <div class="menu-color">
@@ -81,9 +82,26 @@
 
             </form>
         </main>
-        <script src="scripts/email_list.js"></script>
+        
     </body>
 
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="scripts/cookie.js"></script>
+    <script>
+
+        if (getCookieByName("user") == "") {
+            $("#admin-login").append("<a href=\"login.html\">Login</a>")
+
+        } else {
+            $("#admin-login").append("<a href=\"admin.html\">Admin </a>")
+            $("#admin-login").append("<a href=\"logout.html\">Logout</a>")
+
+        }
+
+    </script>
+    <script src="scripts/email_list.js"></script>
+    
 
     <!--- End of body content --->
     <footer style=>

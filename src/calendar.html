@@ -4,12 +4,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Index @ Moe's Dough</title>
+  <title>Calendar @ Moe's Dough</title>
   <link rel="shortcut icon" href="images/favicon.ico" />
   <link href="styles/main.css" rel="stylesheet" type="text/css" />
   <link href="styles/calender.css" rel="stylesheet" type="text/css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-  <script src="scripts/calendar.js"></script>
   <!--- First iteration of the website by August Meyers  & Jared Oberst -->
 </head>
 <div class="wrapper">
@@ -22,6 +20,7 @@
         <h1>Moe's Dough</h1>
         <h2>Located at 1200 S Franklin St, Mt Pleasant, Michigan</h2>
       </div>
+      <div id="admin-login"></div>
     </div>
   </header>
   <div class="menu-color">
@@ -73,10 +72,26 @@
             </tr>
           </table>
         </div>
-        <img src="images/calendar-page-ad.png" alt="Calender Page Ad" width="200%" class="box-2"/>
+        <img src="images/calendar-page-ad.png" alt="Calender Page Ad" width="200%" class="box-2" />
       </div>
     </main>
   </body>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script>
+
+    // TODO Doesn't show login/logout, probably do to with calendar.js
+    if (getCookieByName("user") == "") {
+      $("#admin-login").append("<a href=\"login.html\">Login</a>")
+
+    } else {
+      $("#admin-login").append("<a href=\"admin.html\">Admin </a>")
+      $("#admin-login").append("<a href=\"logout.html\">Logout</a>")
+
+    }
+
+  </script>
+  <script src="scripts/calendar.js"></script>
 
   <!--- End of body content --->
   <footer style=>

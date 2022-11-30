@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Index @ Moe's Dough</title>
+  <title>Order @ Moe's Dough</title>
   <link rel="shortcut icon" href="images/favicon.ico" />
   <link href="styles/main.css" rel="stylesheet" type="text/css" />
   <!--- First iteration of the website by August Meyers  & Jared Oberst -->
@@ -19,6 +19,7 @@
         <h1>Moe's Dough</h1>
         <h2>Located at 1200 S Franklin St, Mt Pleasant, Michigan</h2>
       </div>
+      <div id="admin-login"></div>
     </div>
   </header>
   <div class="menu-color">
@@ -64,15 +65,15 @@
       <div class="content-box order-content-box">
         <div class="box-1 order-content-box">
           Doughnut Flavor:
-            <select name="Size">
-                <option value="Blueberry">Blueberry</option>
-                <option value="Glazed">Glazed</option>
-                <option value="Plain">Plain</option>
-                <option value="Pumpkin">Pumpkin</option>
-                <option value="Pumpkin">Pumpkin</option>
-                <option value="Raspberry">Raspberry</option>
-                <option value="Strawberry">Strawberry</option>
-            </select>
+          <select name="Size">
+            <option value="Blueberry">Blueberry</option>
+            <option value="Glazed">Glazed</option>
+            <option value="Plain">Plain</option>
+            <option value="Pumpkin">Pumpkin</option>
+            <option value="Pumpkin">Pumpkin</option>
+            <option value="Raspberry">Raspberry</option>
+            <option value="Strawberry">Strawberry</option>
+          </select>
         </div>
         <div class="box-2 order-content-box">
           Location:
@@ -105,6 +106,21 @@
       </div>
     </form>
   </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="scripts/cookie.js"></script>
+  <script>
+
+    if (getCookieByName("user") == "") {
+      $("#admin-login").append("<a href=\"login.html\">Login</a>")
+
+    } else {
+      $("#admin-login").append("<a href=\"admin.html\">Admin </a>")
+      $("#admin-login").append("<a href=\"logout.html\">Logout</a>")
+
+    }
+
+  </script>
 
   <!--- End of body content --->
   <footer style=>

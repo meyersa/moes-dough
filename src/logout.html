@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login @ Moe's Dough</title>
+    <title>Logout @ Moe's Dough</title>
     <link rel="shortcut icon" href="images/favicon.ico" />
     <link href="styles/main.css" rel="stylesheet" type="text/css" />
     <link href="styles/admin.css" rel="stylesheet" type="text/css" />
@@ -56,47 +56,14 @@
 
     <body>
         <main class="body-text">
-            <h1>My Website</h1>
-            <div class="login-item">
-                <label for="user">User name:</label>
-                <input type="text" id="user">
-                <span class="message"></span>
-            </div>
-            <div class="login-item">
-                <label for="user">Password:</label>
-                <input type="text" id="password">
-                <span class="message"></span>
-            </div>
-            <div class="login-item">
-                <label></label>
-                <input type="button" id="login" value="Log In" class="login-button">
-            </div>
+            <h1>Logout Successful</h1>
         </main>
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
         <script src="scripts/cookie.js"></script>
-        <script src="data/logins.js"></script>
         <script>
 
-            const user = getCookieByName("user");
-
-            if (user) {
-                location.href = "admin.html"
-
-            } else {
-                $("#user").focus();
-                $("#login").click(() => {
-                    const user = $("#user").val();
-                    const password = $("#password").val();
-
-                    user_data.users.forEach((b) => {
-                        if (b.username == user && b.password == password) {
-                            setCookie("user", user);
-                            location.href = "admin.html"
-
-                        }
-                    })
-                });
-            }
+            deleteCookie("user");
 
         </script>
     </body>

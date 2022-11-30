@@ -1,4 +1,4 @@
-{
+var doughtnut_data = {
     "doughnuts": [
         {
             "doughnut": "Raspberry",

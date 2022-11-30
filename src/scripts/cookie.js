@@ -1,6 +1,4 @@
-"use strict";
-
-const getCookieByName = name => {
+const getCookieByName = (name) => {
     const cookies = document.cookie;
 
     let start = cookies.indexOf(name + "=");
@@ -34,7 +32,17 @@ const deleteCookie = name => {
 
 };
 
-const goToPage = url => {
-    location.href = url;
-    
+const addProductsCookie = () => {
+    try {
+        if (!Array.isArray(JSON.parse(getCookieByName("products")))) {
+            setCookie("products", JSON.stringify(doughtnut_data))
+
+        }
+        // Cookie doesn't exist
+        return JSON.parse(getCookieByName("products"));
+    } catch (e) {
+        setCookie("products", JSON.stringify(doughtnut_data))
+        return JSON.parse(getCookieByName("products"));
+
+    }
 };

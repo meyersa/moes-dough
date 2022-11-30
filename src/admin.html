@@ -4,12 +4,10 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>login @ Moe's Dough</title>
+    <title>Admin @ Moe's Dough</title>
     <link rel="shortcut icon" href="images/favicon.ico" />
     <link href="styles/main.css" rel="stylesheet" type="text/css" />
     <link href="styles/admin.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <script src="scripts/login.js"></script>
     <!--- First iteration of the website by August Meyers  & Jared Oberst -->
 </head>
 <div class="wrapper">
@@ -75,22 +73,29 @@
             </div>
         </main>
 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script src="scripts/cookie.js"></script>
+        <script src="data/orders.js"></script>
+        <script src="data/products.js"></script>
         <script>
+
             const user = getCookieByName("user");
-            if (user) {
+
+            if (user != undefined && user != "") {
                 $("#name").text(user);
                 $("#logout").focus();
 
                 $("#logout").click(() => {
-                    deleteCookie("user");
-                    goToPage("index.html");
+                    window.location.href = "logout.html";
+
                 });
+
             } else {
-                goToPage("index.html");
+                window.location.href = "login.html";
+
             }
 
-            $.get('data/products.json', function (d) {
-            d.doughnuts.forEach(function (b) {
+            addProductsCookie().doughnuts.forEach((b) => {
                 $("#products").append(`
                 <div class="content-box" style="padding-top: 15px">
                     <div class="box-1">
@@ -108,8 +113,9 @@
                 </div> 
                 `);
             });
-        });
+
         </script>
+
     </body>
 
     <!--- End of body content --->
