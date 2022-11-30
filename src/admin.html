@@ -81,6 +81,24 @@
 
             const user = getCookieByName("user");
 
+            $("#create_doughnut").click(() => {
+                // Create doughnut
+
+            });
+
+            $("#edit_doughnut").click(() => {
+                // Edit doughnut some how? Not sure
+
+            });
+
+            $("#clear_all").click(() => {
+                doughnut_data = []
+                setCookie("products", doughnut_data);
+
+            });
+
+
+
             if (user != undefined && user != "") {
                 $("#name").text(user);
                 $("#logout").focus();
