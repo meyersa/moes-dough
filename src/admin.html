@@ -61,8 +61,34 @@
                 <h2>Cookies..</h2>
             </div>
             <div>
+                <form id="doughnut_edit" name="doughnut_edit" action="join.html" method="get" style="padding-bottom: 1em;">
+                    <h1>Create Doughnut</h1>
+                    <div>
+                        <label for="email_1">Doughnut Type:</label>
+                        <input type="text" id="email_1" name="email_1">
+                    </div>
+    
+                    <div>
+                        <label for="email_2">Doughnut Description:</label>
+                        <input type="text" id="email_2" name="email_2">
+                    </div>
+    
+                    <div>
+                        <label for="first_name">Image Location:</label>
+                        <input type="text" id="first_name" name="first_name">
+                    </div>
+                    <div>
+                        <label for="first_name">Featured:</label>
+                        <input type="text" id="first_name" name="first_name">
+                    </div>
+                    <div class="bottom-buttons">
+                        <label>&nbsp;</label>
+                        <input type="button" id="join_list" value="Add Doughnut" class="login-button">
+                        <input type="button" id="clear_form" value="Clear Form" class="login-button">
+                    </div>
+    
+                </form>
                 <input type="button" id="create_doughnut" value="Create Doughnut" class="login-button">
-                <input type="button" id="edit_doughnut" value="Edit Doughnut" class="login-button">
                 <input type="button" id="clear_all" value="Clear All" class="login-button">
             </div>
             <div>
@@ -83,11 +109,6 @@
 
             $("#create_doughnut").click(() => {
                 // Create doughnut
-
-            });
-
-            $("#edit_doughnut").click(() => {
-                // Edit doughnut some how? Not sure
 
             });
 
